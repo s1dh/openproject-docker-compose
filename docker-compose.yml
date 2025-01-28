@@ -50,7 +50,7 @@ services:
     <<: *app
     command: "./docker/prod/web"
     ports:
-      - "${PORT:-8080}:80"
+      - ":80"
     networks:
       - frontend
       - backend
