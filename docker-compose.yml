@@ -3,8 +3,8 @@ networks:
   backend:
 
 volumes:
-  pgdata:
-  opdata:
+  pgdata:PGDATA
+  opdata:OPDATA
 
 x-op-restart-policy: &restart_policy
   restart: unless-stopped
