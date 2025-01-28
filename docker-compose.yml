@@ -50,7 +50,7 @@ services:
     <<: *app
     command: "./docker/prod/web"
     volumes:
-      - : /data/docker/volumes/openproject15_TOKEN/enterprise_token.rb:/app/app/models/enterprise_token.rb:ro
+      - : /home/ixsys/enterprise_token.rb:/app/app/models/enterprise_token.rb:ro
     ports:
       - ":80"
     networks:
