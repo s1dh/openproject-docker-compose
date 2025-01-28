@@ -5,7 +5,7 @@ networks:
 volumes:
   pgdata:
   opdata:
-  
+
 x-op-restart-policy: &restart_policy
   restart: unless-stopped
 x-op-image: &image
@@ -49,6 +49,8 @@ services:
   web:
     <<: *app
     command: "./docker/prod/web"
+    volumes:
+      - : "/data/docker/volumes/openproject15_TOKEN/enterprise_token.rb:/app/app/models/enterprise_token.rb:ro"
     ports:
       - ":80"
     networks:
