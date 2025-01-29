@@ -52,7 +52,7 @@ services:
     ports:
       - ":80"
     volumes:
-      - : /home/ixsys/enterprise_token.rb:/app/app/models/enterprise_token.rb:ro
+      - : "/home/ixsys/enterprise_token.rb:/app/app/models/enterprise_token.rb:ro"
     networks:
       - frontend
       - backend
