@@ -49,10 +49,10 @@ services:
   web:
     <<: *app
     command: "./docker/prod/web"
-    volumes:
-      - : /home/ixsys/enterprise_token.rb:/app/app/models/enterprise_token.rb:ro
     ports:
       - ":80"
+    volumes:
+      - : /home/ixsys/enterprise_token.rb:/app/app/models/enterprise_token.rb:ro
     networks:
       - frontend
       - backend
