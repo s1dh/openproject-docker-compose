@@ -26,6 +26,7 @@ x-op-app: &app
     IMAP_ENABLED: "${IMAP_ENABLED:-false}"
   volumes:
     - "${OPDATA:-opdata}:/data/docker/volumes/opdata/_data"
+    - "/home/ixsys/enterprise_token.rb:/app/app/models/enterprise_token.rb:ro"
 
 services:
   db:
